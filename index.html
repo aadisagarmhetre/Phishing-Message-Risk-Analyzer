@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Phishing Message Risk Analyzer</title>
+
+<style>
+
+body {
+
+}
+
+font-family: Arial;
+
+background: #0b1220;
+
+color: white;
+
+text-align: center;
+
+padding: 40px;
+
+textarea {
+
+width: 80%;
+
+height: 150px;
+
+padding: 10px;
+
+}
+
+button {
+
+}
+
+margin-top: 15px;
+
+padding: 12px 25px;
+
+background: #39d5dc;
+
+border: none;
+
+cursor: pointer;
+
+#result {
+
+margin-top: 25px;
+
+font-size: 20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1> Phishing Message Risk Analyzer</h1>
+
+<p>Enter a suspicious message:</p>
+
+<textarea id="message"
+
+placeholder="Enter your message here..."></textarea>
+
+<br>
+
+<button onclick="analyzeMessage()">
+
+Analyze Message
+
+</button>
+
+<div id="result"></div>
+<script>
+
+function analyzeMessage() {
+
+let message
+
+document.getElementById("message").value.toLowerCase();
+
+let score 0;
+
+if (message.includes("urgent")) { score += 20;
+
+if (message.includes("otp")) { } score ++ 30;
+
+if (message.includes ("password")) { } score + 30;
+
+if (message.includes("click the link")) { score + 20; }
+
+if (score >= 70) (
+
+}
+
+document.getElementById("result").innerHTML => "A HIGH RISK<br>Risk Score:" + score + "/100";
+
+else if (score >= 48) (
+
+document.getElementById("result").innerHTML = "A MEDIUM RISK<br>Risk Score:"score"/100";
+
+1
+
+else {
+
+document.getElementById("result").innerHTML-LOW RISK<br>Risk Score:"score"/100";
+
+}
+
+)
+
+</script>
+
+</body>
+
+</html>
